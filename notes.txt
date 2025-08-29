@@ -1,0 +1,32 @@
+Concepts
+--------
+LLM = It is a prediction model in essence, it predicts the next word in a sequence based on the words that came before it.
+Pretrained = All the heavy lifting is done, the models have already been trained on massive datasets
+Transformers = It is specific neural network architecture that is particularly well-suited for processing sequential data, such as text. 
+    It was introduced in the paper "Attention is All You Need" by Vaswani et al. in 2017.
+Neural Networks = They are excellent spotting patterns in data, making them ideal for tasks like image and speech recognition, as well as natural language processing.
+Probability Distributions = This is the output of a Neural Network, which gives the likelihood of each possible next word in a sequence.
+Attention Mechanism = It is a mechanism that allows the model to focus on different parts of the input sequence when making predictions.
+
+Prompt Engineering = It is the skill of being able to use language to give the model some context and make it response in the way you want it to.
+System Prompt = It sets the behavior and context for the AI, guiding how it should respond to user inputs.
+    LLMs like ChatGPT are actually trained to put extra weight on the system prompt, so it has a significant influence on the model's behavior.
+User Prompt = It is the input provided by the user, which the AI responds to based on the context set by the system prompt.
+Few-shot Prompting = It involves providing the model with a few examples of the desired input-output behavior within the prompt itself.
+    This helps the model understand the task better and generate more accurate responses.
+Chain-of-Thought Prompting = It is a technique where the model is guided to generate intermediate reasoning steps before arriving at a final answer.
+    This can help improve the model's performance on complex tasks that require multi-step reasoning.
+    
+Context Window = It refers to the maximum amount of text (in tokens) that the model can consider at once when generating a response.
+    If the input exceeds this limit, the model may lose important context, leading to less accurate or relevant responses.
+    LLMs are stateless, meaning they do not retain memory of past interactions unless that information is included in the current prompt.
+    
+MTP = It stands for Multi-Turn Prompting, which involves structuring prompts to include multiple interactions or turns in a conversation.
+    This technique helps maintain context and coherence in dialogues with the model.
+    MTP can be particularly useful for applications like chatbots or virtual assistants, where maintaining the flow of conversation is crucial.
+    
+Completion Models = These models generate text by predicting the next word in a sequence based on the preceding words.
+    They are typically used for tasks like text generation, summarization, and translation.
+    
+Reasoning Models = These models are designed to perform tasks that require logical thinking and problem-solving.
+    They can handle more complex queries and provide more accurate answers by simulating human-like reasoning processes.

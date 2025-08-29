@@ -1,0 +1,29 @@
+{
+  "name": ".NET 10 Preview",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:10.0-preview",
+  "remoteUser": "vscode",
+  "runArgs": ["--shm-size=2g", "--security-opt", "label=disable"],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+  ],
+  "remoteEnv": {
+    "HOST_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+        "terminal.integrated.fontSize": 15,
+        "workbench.iconTheme": "bearded-icons",
+        "workbench.colorTheme": "Visual Studio Dark",
+        "terraform.languageServer": {
+          "enabled": true
+        }
+      }
+    }
+  }
+}
