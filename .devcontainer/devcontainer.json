@@ -2,13 +2,11 @@
   "name": ".NET 10 Preview",
   "image": "docker.io/gurame/dc-dotnet:10.0-preview",
   "remoteUser": "vscode",
-  "containerUser": "1000:1000",
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
   "mounts": [
     "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
-    //"source=${localEnv:HOME}/.gnupg,target=/home/vscode/.gnupg,type=bind,consistency=cached",
     "source=${localEnv:HOME}/.aspnet/https,target=/https,type=bind"
   ],
   "remoteEnv": {
@@ -22,10 +20,12 @@
         "terminal.integrated.fontFamily": "MesloLGM Nerd Font",
         "terminal.integrated.fontSize": 15,
         "workbench.iconTheme": "bearded-icons",
-        "workbench.colorTheme": "Dracula Theme"
+        "workbench.colorTheme": "Dracula Theme",
+        "editor.formatOnSave": true
       },
       "extensions": [
-        // "ms-dotnettools.csdevkit"
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.vscode-dotnet-runtime"
       ]
     }
   }
