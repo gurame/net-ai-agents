@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		notes.txt = notes.txt
 		ai-api-provider.png = ai-api-provider.png
+		Makefile = Makefile
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CC3F1E1A-9371-4FCD-B5B6-BD5947CC7218}"
@@ -14,6 +15,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicOpenAIExample", "src\BasicOpenAIExample\BasicOpenAIExample.csproj", "{153F4F38-5716-47FE-B7FB-3E52AA7E77FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAgent", "src\ConsoleAgent\ConsoleAgent.csproj", "{43FACB2B-5D24-4C9B-AA35-0A2D6894C98F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceApp", "src\InvoiceApp\InvoiceApp.csproj", "{854E293A-6AF2-4825-A13F-AC978BC480B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceAgentApi", "src\InvoiceAgentApi\InvoiceAgentApi.csproj", "{FCE62A7E-AF67-4E62-A7D1-C58ED7FD24E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +31,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{153F4F38-5716-47FE-B7FB-3E52AA7E77FA} = {CC3F1E1A-9371-4FCD-B5B6-BD5947CC7218}
 		{43FACB2B-5D24-4C9B-AA35-0A2D6894C98F} = {CC3F1E1A-9371-4FCD-B5B6-BD5947CC7218}
+		{854E293A-6AF2-4825-A13F-AC978BC480B0} = {CC3F1E1A-9371-4FCD-B5B6-BD5947CC7218}
+		{FCE62A7E-AF67-4E62-A7D1-C58ED7FD24E3} = {CC3F1E1A-9371-4FCD-B5B6-BD5947CC7218}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{153F4F38-5716-47FE-B7FB-3E52AA7E77FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +43,13 @@ Global
 		{43FACB2B-5D24-4C9B-AA35-0A2D6894C98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43FACB2B-5D24-4C9B-AA35-0A2D6894C98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43FACB2B-5D24-4C9B-AA35-0A2D6894C98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{854E293A-6AF2-4825-A13F-AC978BC480B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{854E293A-6AF2-4825-A13F-AC978BC480B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{854E293A-6AF2-4825-A13F-AC978BC480B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{854E293A-6AF2-4825-A13F-AC978BC480B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE62A7E-AF67-4E62-A7D1-C58ED7FD24E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE62A7E-AF67-4E62-A7D1-C58ED7FD24E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE62A7E-AF67-4E62-A7D1-C58ED7FD24E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE62A7E-AF67-4E62-A7D1-C58ED7FD24E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

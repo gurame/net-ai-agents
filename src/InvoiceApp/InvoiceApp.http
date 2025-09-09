@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:5012/api
+
+### Create new invoice
+POST {{baseUrl}}/invoices
+Accept: application/json
+Content-Type: application/json
+
+{
+  "description": "Web development services",
+  "amount": 150.75,
+  "invoiceDate": "2024-06-15",
+  "dueDate": "2024-07-15"
+}

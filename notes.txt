@@ -25,8 +25,41 @@ MTP = It stands for Multi-Turn Prompting, which involves structuring prompts to 
     This technique helps maintain context and coherence in dialogues with the model.
     MTP can be particularly useful for applications like chatbots or virtual assistants, where maintaining the flow of conversation is crucial.
     
+MTP Spec = It is a structured format for organizing multi-turn prompts, ensuring clarity and coherence in the interactions with the model.
+    The MTP Spec typically includes sections for system prompts, user prompts, and any necessary context or instructions.
+    By following a standardized MTP Spec, developers can create more effective and consistent interactions with LLMs.
+    
 Completion Models = These models generate text by predicting the next word in a sequence based on the preceding words.
     They are typically used for tasks like text generation, summarization, and translation.
     
 Reasoning Models = These models are designed to perform tasks that require logical thinking and problem-solving.
     They can handle more complex queries and provide more accurate answers by simulating human-like reasoning processes.
+    
+Tool Calling = It refers to the ability of LLMs to interact with external tools or APIs to enhance their functionality.
+    This can include tasks like retrieving real-time information, performing calculations, or accessing databases.
+    By integrating tool calling capabilities, LLMs can provide more accurate and contextually relevant responses.
+    
+Agent Loop = It is a framework that allows LLMs to interact with external tools and APIs in a structured manner.
+    The agent loop typically involves the following steps:
+        1. The model receives a user prompt and generates an initial response.
+        2. If the response requires additional information or actions, the model identifies the necessary tools or APIs to call.
+        3. The model makes the appropriate tool calls and retrieves the required data.
+        4. The model integrates the retrieved data into its response and generates a final output for the user.
+    This iterative process allows LLMs to perform more complex tasks by leveraging external resources.
+    
+Reasoning = It is the cognitive process of analyzing information, drawing conclusions, and making decisions based on evidence and logic.
+    In the context of LLMs, reasoning involves the model's ability to understand complex queries, identify relevant information, and generate coherent and accurate responses.
+    Effective reasoning in LLMs can be enhanced through techniques like chain-of-thought prompting and tool calling, which help the model break down complex tasks into manageable steps.
+    
+Memory Management = It refers to the strategies and techniques used to handle and utilize information effectively within LLMs.
+    Since LLMs are stateless and have a limited context window, memory management is crucial for maintaining coherence and relevance in responses.
+    Techniques for memory management include:
+        1. Contextual Summarization: Summarizing previous interactions to fit within the context window while retaining essential information.
+        2. External Memory Storage: Using databases or other storage solutions to keep track of past interactions and retrieve relevant information when needed.
+        3. Dynamic Prompting: Adjusting prompts based on the current context and user needs to ensure the model has access to the most relevant information.
+    By implementing effective memory management strategies, developers can enhance the performance and user experience of applications built on LLMs.
+    
+Embeddings = They are numerical representations of words or phrases in a high-dimensional space, capturing semantic relationships between them.
+    In the context of LLMs, embeddings are used to represent text data in a way that the model can understand and process.
+    Embeddings can be generated using various techniques, such as Word2Vec, GloVe, or transformer-based models like BERT.
+    By leveraging embeddings, LLMs can perform tasks like similarity search, clustering, and classification more effectively.

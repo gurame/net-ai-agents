@@ -1,0 +1,55 @@
+@page "/invoices"
+@using InvoiceApp.Models
+@using InvoiceApp.Services
+@inject IInvoiceService Service;
+@attribute [StreamRendering]
+
+<PageTitle>Invoices</PageTitle>
+
+<h1>Invoice</h1>
+
+@if (_invoices == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Invoice Date</th>
+            <th>Due Date</th>
+            <th>Is Paid</th>
+        </tr>
+        </thead>
+        <tbody>
+        @if (_invoices != null)
+        {
+            foreach (var invoice in _invoices)
+            {
+                <tr>
+                    <td>@invoice.Id</td>
+                    <td>@invoice.Description</td>
+                    <td>@invoice.Amount</td>
+                    <td>@invoice.InvoiceDate.ToString("dd/MM/yyyy")</td>
+                    <td>@invoice.DueDate.ToString("dd/MM/yyyy")</td>
+                    <td>@invoice.IsPaid</td>
+                </tr>
+            }
+        }
+    </tbody>
+    </table>
+}
+
+@code {
+    private IEnumerable<Invoice>? _invoices = null;
+    protected override async Task OnInitializedAsync()
+    {
+        _invoices = await Service.GetAllAsync();
+    }
+}
