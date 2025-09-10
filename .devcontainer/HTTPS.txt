@@ -1,0 +1,65 @@
+🔒 Flujo de una conexión HTTPS (explicado paso a paso)
+1. El cliente pide hablar seguro
+
+Tu navegador o aplicación dice al servidor:
+👉 “Quiero hablar por HTTPS. Estas son las formas de seguridad que entiendo usar”.
+
+Aquí se incluyen las versiones de TLS y métodos de cifrado que soporta.
+
+También manda una clave temporal (pública) para empezar a crear un secreto compartido.
+
+2. El servidor responde
+
+El servidor (Kestrel, GitHub, etc.) responde:
+👉 “Perfecto, de todas tus opciones, usaré esta. Y aquí va mi clave temporal (pública)”.
+
+Ahora tanto cliente como servidor tienen lo necesario para crear un secreto compartido que solo ellos conocen.
+
+3. El servidor se identifica
+
+El servidor envía su certificado digital.
+👉 “Soy el servidor X, y esta es mi clave pública de identidad”.
+
+Ese certificado lo emite una autoridad confiable (CA) o, en desarrollo, es autofirmado.
+
+Incluye la clave pública del servidor y datos como el nombre o dominio.
+
+4. El servidor demuestra que es dueño de esa identidad
+
+El servidor usa su clave privada para firmar un mensaje.
+👉 “Mira, no solo te muestro un certificado, también demuestro que poseo la clave privada correspondiente”.
+
+El cliente puede verificar esa firma usando la clave pública del certificado.
+
+Esto asegura que el servidor es realmente quien dice ser.
+
+5. Validación del cliente
+
+El cliente comprueba:
+
+Que el certificado no esté vencido.
+
+Que el nombre del sitio coincida.
+
+Que la firma provenga de una CA confiable.
+👉 En desarrollo con certificados autofirmados, esta parte falla si no has marcado el certificado como “confiable”.
+
+6. Finalización del intercambio
+
+Ambos lados confirman que todo está bien.
+👉 Se mandan mensajes de verificación para cerrar la fase inicial.
+
+7. Nace el canal seguro
+
+Con el secreto compartido que generaron en los pasos 1 y 2, crean claves de sesión simétricas (las que cifran realmente los datos).
+👉 Desde ahora, todo lo que viaja va cifrado (contraseñas, cookies, API calls, etc.).
+
+📌 Resumen sencillo
+
+Clave pública del certificado → sirve para que el cliente verifique la identidad del servidor.
+
+Clave privada del servidor → nunca viaja; se usa solo para probar que el servidor es dueño del certificado.
+
+Claves temporales (ephemerals) → permiten crear un secreto compartido.
+
+Claves de sesión → cifran todo el tráfico real.
