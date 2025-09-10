@@ -5,6 +5,7 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   },
+  "postCreateCommand": "bash .devcontainer/setup-certs.sh",
   "mounts": [
     "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
     "source=${localEnv:HOME}/.aspnet/https,target=/https,type=bind"
