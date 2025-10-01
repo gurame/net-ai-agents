@@ -63,3 +63,13 @@ Embeddings = They are numerical representations of words or phrases in a high-di
     In the context of LLMs, embeddings are used to represent text data in a way that the model can understand and process.
     Embeddings can be generated using various techniques, such as Word2Vec, GloVe, or transformer-based models like BERT.
     By leveraging embeddings, LLMs can perform tasks like similarity search, clustering, and classification more effectively.
+    
+Fill in the middle Paradigm = It is a technique used to enhance the performance of LLMs by providing them with additional context or information to fill in gaps in their knowledge.
+    This can involve using external data sources, such as databases or knowledge graphs, to supplement the model's understanding of a topic.
+    The fill in the middle paradigm can help improve the accuracy and relevance of responses, particularly for complex queries that require specialized knowledge.
+    By integrating this approach into LLM applications, developers can create more robust and reliable systems that better meet user needs.
+    
+is FIM used in code editors? = Yes, FIM is used in code editors to help developers by providing context-aware code completions and suggestions.
+    By leveraging the fill in the middle paradigm, code editors can offer more accurate and relevant recommendations based on the surrounding code and the developer's intent.
+    This can enhance productivity and reduce errors by helping developers write code more efficiently.
+    Examples of code editors that utilize FIM include GitHub Copilot and other AI-powered coding assistants.
